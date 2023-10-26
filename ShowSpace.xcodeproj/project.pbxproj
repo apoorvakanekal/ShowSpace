@@ -14,6 +14,7 @@
 		1724DA6D2AEA26A40027E472 /* ShowSpaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1724DA6C2AEA26A40027E472 /* ShowSpaceTests.swift */; };
 		1724DA772AEA26A50027E472 /* ShowSpaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1724DA762AEA26A50027E472 /* ShowSpaceUITests.swift */; };
 		1724DA792AEA26A50027E472 /* ShowSpaceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1724DA782AEA26A50027E472 /* ShowSpaceUITestsLaunchTests.swift */; };
+		1724DA8B2AEA2BC90027E472 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1724DA8A2AEA2BC90027E472 /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		1724DA722AEA26A50027E472 /* ShowSpaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShowSpaceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1724DA762AEA26A50027E472 /* ShowSpaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSpaceUITests.swift; sourceTree = "<group>"; };
 		1724DA782AEA26A50027E472 /* ShowSpaceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSpaceUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1724DA8A2AEA2BC90027E472 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +97,10 @@
 		1724DA592AEA269E0027E472 /* ShowSpace */ = {
 			isa = PBXGroup;
 			children = (
+				1724DA852AEA2B3F0027E472 /* Views */,
+				1724DA892AEA2B780027E472 /* ViewModels */,
+				1724DA882AEA2B610027E472 /* Models */,
 				1724DA5A2AEA269E0027E472 /* ShowSpaceApp.swift */,
-				1724DA5C2AEA269E0027E472 /* ContentView.swift */,
 				1724DA5E2AEA26A40027E472 /* Assets.xcassets */,
 				1724DA602AEA26A40027E472 /* ShowSpace.entitlements */,
 				1724DA612AEA26A40027E472 /* Preview Content */,
@@ -127,6 +131,29 @@
 				1724DA782AEA26A50027E472 /* ShowSpaceUITestsLaunchTests.swift */,
 			);
 			path = ShowSpaceUITests;
+			sourceTree = "<group>";
+		};
+		1724DA852AEA2B3F0027E472 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1724DA5C2AEA269E0027E472 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1724DA882AEA2B610027E472 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1724DA892AEA2B780027E472 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1724DA8A2AEA2BC90027E472 /* ContentViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +288,7 @@
 			files = (
 				1724DA5D2AEA269E0027E472 /* ContentView.swift in Sources */,
 				1724DA5B2AEA269E0027E472 /* ShowSpaceApp.swift in Sources */,
+				1724DA8B2AEA2BC90027E472 /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
