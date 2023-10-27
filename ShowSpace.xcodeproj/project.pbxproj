@@ -15,6 +15,7 @@
 		1724DA772AEA26A50027E472 /* ShowSpaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1724DA762AEA26A50027E472 /* ShowSpaceUITests.swift */; };
 		1724DA792AEA26A50027E472 /* ShowSpaceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1724DA782AEA26A50027E472 /* ShowSpaceUITestsLaunchTests.swift */; };
 		1724DA8B2AEA2BC90027E472 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1724DA8A2AEA2BC90027E472 /* ContentViewModel.swift */; };
+		1724DA8D2AEB07EC0027E472 /* ShowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1724DA8C2AEB07EC0027E472 /* ShowData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		1724DA762AEA26A50027E472 /* ShowSpaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSpaceUITests.swift; sourceTree = "<group>"; };
 		1724DA782AEA26A50027E472 /* ShowSpaceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSpaceUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1724DA8A2AEA2BC90027E472 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		1724DA8C2AEB07EC0027E472 /* ShowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 		1724DA882AEA2B610027E472 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1724DA8C2AEB07EC0027E472 /* ShowData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1724DA8D2AEB07EC0027E472 /* ShowData.swift in Sources */,
 				1724DA5D2AEA269E0027E472 /* ContentView.swift in Sources */,
 				1724DA5B2AEA269E0027E472 /* ShowSpaceApp.swift in Sources */,
 				1724DA8B2AEA2BC90027E472 /* ContentViewModel.swift in Sources */,

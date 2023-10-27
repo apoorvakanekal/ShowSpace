@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var contentViewModel = ContentViewModel()
+    
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
