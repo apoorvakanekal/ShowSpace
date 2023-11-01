@@ -5,23 +5,36 @@
 //  Created by Apoorva Kanekal on 10/25/23.
 //
 
+
 import SwiftUI
+import Foundation
+
 
 struct ContentView: View {
-    @ObservedObject var contentViewModel = ContentViewModel()
-    
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        TabView {
+            HomeView()
+                .tabItem {
+                    Label("Home", systemImage: "house")
+                }
+            SearchView()
+                .tabItem {
+                    Label("Search", systemImage: "magnifyingglass")
+                }
+            AccountView()
+                .tabItem {
+                    Label("Account", systemImage: "person")
+                }
         }
-        .padding()
     }
 }
 
-#Preview {
-    ContentView()
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
+

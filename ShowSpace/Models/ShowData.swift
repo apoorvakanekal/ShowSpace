@@ -6,17 +6,15 @@
 //
 
 import Foundation
-import SwiftUI
 
 struct Show: Codable, Identifiable {
-    var id: Int?
-    var url: String?
-    var name: String?
-    var genres: [String]?
-    var premiered: String?
-    var rating: Rating?
-    var image: Photo?
-    var summary: String?
+    var id: Int
+    var name: String
+    var genres: [String]
+    var premiered: String
+    var rating: Rating
+    var image: Photo
+    var summary: String
 }
 
 struct Rating: Codable{
@@ -24,5 +22,5 @@ struct Rating: Codable{
 }
 
 struct Photo : Codable{
-    var original: String?
+    var medium: String
 }
