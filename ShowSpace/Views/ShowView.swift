@@ -35,6 +35,7 @@ struct ShowView: View {
                         }
                         Text("\(show.rating.average ?? 0.0)" + "/10")
                             .foregroundColor(DesignConstants.textColor)
+                            .font(.title2)
                         HStack{
                             PrimaryButton()
                             AllStarButton()
