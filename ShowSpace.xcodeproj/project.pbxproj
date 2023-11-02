@@ -23,6 +23,7 @@
 		17D6D6402AF1D27D003D57A6 /* DesignConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D6D63F2AF1D27D003D57A6 /* DesignConstants.swift */; };
 		17D6D6432AF1D75D003D57A6 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D6D6422AF1D75D003D57A6 /* PrimaryButton.swift */; };
 		17D6D6452AF1DF8C003D57A6 /* AllStarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D6D6442AF1DF8C003D57A6 /* AllStarButton.swift */; };
+		17D6D6472AF41DEE003D57A6 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D6D6462AF41DED003D57A6 /* Genre.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		17D6D63F2AF1D27D003D57A6 /* DesignConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignConstants.swift; sourceTree = "<group>"; };
 		17D6D6422AF1D75D003D57A6 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		17D6D6442AF1DF8C003D57A6 /* AllStarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStarButton.swift; sourceTree = "<group>"; };
+		17D6D6462AF41DED003D57A6 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 			children = (
 				17D6D6422AF1D75D003D57A6 /* PrimaryButton.swift */,
 				17D6D6442AF1DF8C003D57A6 /* AllStarButton.swift */,
+				17D6D6462AF41DED003D57A6 /* Genre.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				17D6D6382AF043AE003D57A6 /* ShowView.swift in Sources */,
 				1724DA8D2AEB07EC0027E472 /* ShowData.swift in Sources */,
 				17D6D6432AF1D75D003D57A6 /* PrimaryButton.swift in Sources */,
+				17D6D6472AF41DEE003D57A6 /* Genre.swift in Sources */,
 				17D6D6402AF1D27D003D57A6 /* DesignConstants.swift in Sources */,
 				1724DA5D2AEA269E0027E472 /* ContentView.swift in Sources */,
 				17D6D63C2AF05850003D57A6 /* SearchView.swift in Sources */,

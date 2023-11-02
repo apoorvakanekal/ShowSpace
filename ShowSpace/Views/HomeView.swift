@@ -10,12 +10,16 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Home")
+        ZStack{
+            DesignConstants.bgColor
+                .ignoresSafeArea()
+            VStack {
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundStyle(.tint)
+                Text("Home")
+                    .foregroundColor(DesignConstants.textColor)
+            }
         }
-        .padding()
     }
 }

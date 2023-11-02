@@ -16,14 +16,18 @@ struct ContentView: View {
         
         TabView {
             HomeView()
+                .toolbarBackground(DesignConstants.bgColor, for: .tabBar)
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
             SearchView()
+                .toolbarBackground(DesignConstants.bgColor, for: .tabBar)
                 .tabItem {
                     Label("Search", systemImage: "magnifyingglass")
                 }
+                .environment(\.colorScheme, .dark)
             AccountView()
+                .toolbarBackground(DesignConstants.bgColor, for: .tabBar)
                 .tabItem {
                     Label("Account", systemImage: "person")
                 }

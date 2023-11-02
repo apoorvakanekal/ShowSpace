@@ -12,38 +12,37 @@ struct SearchView: View {
     @ObservedObject var showViewModel = ShowViewModel()
     @State var searchText = ""
     
+    
     var body: some View {
+        
         NavigationView{
-            ZStack{
-                DesignConstants.bgColor
-                    .ignoresSafeArea()
-                List(searchResults) { show in
-                    VStack(alignment: .leading) {
-                        NavigationLink {
-                            ShowView(show: show)
-                        } label: {
-                            HStack{
-                                AsyncImage(url: URL(string: "\(show.image.medium)")){ phase in switch phase{
-                                case .empty:
-                                    Image(systemName: "photo")
-                                        .frame(height: 80)
-                                case .success(let image):
-                                    image.resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(maxHeight: 80)
-                                case .failure:
-                                    Image(systemName: "photo")
-                                        .frame(height: 80)
-                                @unknown default:
-                                    EmptyView()
-                                        .frame(height: 80)
-                                }
-                                }
-                                .frame(height: 80)
-                                VStack{
-                                    Text("\(show.name)")
-                                    Text("\(show.premiered)")
-                                }
+            List(searchResults) { show in
+                VStack(alignment: .leading) {
+                    NavigationLink {
+                        ShowView(show: show)
+                    } label: {
+                        HStack{
+                            AsyncImage(url: URL(string: "\(show.image.medium)")){ phase in switch phase{
+                            case .empty:
+                                Image(systemName: "photo")
+                                    .frame(height: 80)
+                            case .success(let image):
+                                image.resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(maxHeight: 80)
+                            case .failure:
+                                Image(systemName: "photo")
+                                    .frame(height: 80)
+                            @unknown default:
+                                EmptyView()
+                                    .frame(height: 80)
+                            }
+                            }
+                            .frame(height: 80)
+                            VStack{
+                                Text("\(show.name)")
+                                Text("\(show.premiered)")
+                                    .font(.caption)
                             }
                         }
                     }

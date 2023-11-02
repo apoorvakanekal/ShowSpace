@@ -10,12 +10,16 @@ import SwiftUI
 
 struct AccountView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Account")
+        ZStack{
+            DesignConstants.bgColor
+                .ignoresSafeArea()
+            VStack {
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundStyle(.tint)
+                Text("Account")
+                    .foregroundColor(DesignConstants.textColor)
+            }
         }
-        .padding()
     }
 }

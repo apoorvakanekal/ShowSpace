@@ -23,10 +23,15 @@ struct ShowView: View {
                             .font(.largeTitle)
                             .foregroundColor(DesignConstants.textColor)
                             .frame(alignment:.leading)
-                        ForEach(show.genres, id: \.self){ genre in
-                            Text(genre)
-                                .frame(alignment: .leading)
-                                .foregroundColor(DesignConstants.textColor)
+                        HStack{
+                            ForEach(show.genres, id: \.self){ genre in
+                                Genre{
+                                    Text(genre)
+                                        .foregroundColor(Color("show-yellow"))
+                                        .font(.caption)
+                                        .padding(5)
+                                }
+                            }
                         }
                         Text("\(show.rating.average ?? 0.0)" + "/10")
                             .foregroundColor(DesignConstants.textColor)

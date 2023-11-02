@@ -1,0 +1,20 @@
+//
+//  Genre.swift
+//  ShowSpace
+//
+//  Created by Apoorva Kanekal on 11/2/23.
+//
+
+import Foundation
+import SwiftUI
+
+struct Genre<Content: View>: View {
+    var content: () -> Content
+    var body: some View{
+        HStack (content: content)
+            .border(Color("show-yellow"))
+            .cornerRadius(2.0)
+            .frame(height: 30)
+    }
+}
+
