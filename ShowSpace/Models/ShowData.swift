@@ -11,7 +11,7 @@ struct Show: Codable, Identifiable {
     var id: Int
     var name: String
     var genres: [String]
-    var premiered: String
+    var premiered: Date
     var rating: Rating
     var image: Photo
     var summary: String

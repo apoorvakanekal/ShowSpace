@@ -15,6 +15,7 @@ struct Genre<Content: View>: View {
             .border(Color("show-yellow"))
             .cornerRadius(2.0)
             .frame(height: 30)
+            .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
     }
 }
 

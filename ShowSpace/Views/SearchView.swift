@@ -12,6 +12,8 @@ struct SearchView: View {
     @ObservedObject var showViewModel = ShowViewModel()
     @State var searchText = ""
     
+    let dateFormatter = DateFormatter()
+    
     
     var body: some View {
         
@@ -41,8 +43,12 @@ struct SearchView: View {
                             .frame(height: 80)
                             VStack{
                                 Text("\(show.name)")
-                                Text("\(show.premiered)")
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                Text("\(show.premiered.formatted(.dateTime.year()))")
                                     .font(.caption)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .foregroundColor(Color("cool purple"))
+                                
                             }
                         }
                     }
