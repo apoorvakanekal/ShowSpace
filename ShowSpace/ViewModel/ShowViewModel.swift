@@ -6,11 +6,12 @@
 //
 
 import Foundation
+import SwiftUI
 
 class ShowViewModel: ObservableObject {
     
     @Published var shows = [Show]()
-   
+    
     
     @MainActor
     func getShows() async -> () {

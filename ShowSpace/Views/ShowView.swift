@@ -9,9 +9,12 @@ import SwiftUI
 
 struct ShowView: View {
     
-    @AppStorage("isAddedToAllStars") private var isAddedToAllStars = false
-    
     var show: Show
+    
+    @State private var rating: String = ""
+    @AppStorage("isRated") private var isRated = false
+    @AppStorage("userRating") private var userRating: String = ""
+    
     
     var body: some View {
         ZStack(alignment: .topLeading){
@@ -63,7 +66,7 @@ struct ShowView: View {
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
                 }
                 Divider()
-                HStack{
+                HStack(alignment: .center){
                     VStack{
                         Image(systemName: "star.fill")
                             .foregroundColor(Color("show-yellow"))
@@ -72,16 +75,13 @@ struct ShowView: View {
                             .foregroundColor(DesignConstants.textColor)
                             .frame(alignment: .leading)
                     }
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 25))
-                    VStack{
-                        Image(systemName: "star")
-                            .foregroundColor(Color("cool purple"))
-                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 3, trailing: 0))
-                        Text("Rate this?")
-                    }
                     .padding(EdgeInsets(top: 0, leading: 25, bottom: 0, trailing: 0))
+                    VStack(alignment: .center){
+                        CustomTextField(placeHolder: "Your Rating / 10", imageName: "star", tOpacity: 1.0, value: $rating)
+                    }
+                    .padding(EdgeInsets(top: 0, leading: 40, bottom: 0, trailing: 0))
                 }
-                .padding(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 0))
+                .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 0))
                 Divider()
                 Text("Summary")
                     .font(.title2)

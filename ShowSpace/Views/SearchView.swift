@@ -11,7 +11,7 @@ struct SearchView: View {
     
     @ObservedObject var showViewModel = ShowViewModel()
     @State var searchText = ""
-    
+
     let dateFormatter = DateFormatter()
     
     
@@ -56,6 +56,7 @@ struct SearchView: View {
             }
             .task{
                 await showViewModel.getShows()
+
             }
             .searchable(text:$searchText)
         }

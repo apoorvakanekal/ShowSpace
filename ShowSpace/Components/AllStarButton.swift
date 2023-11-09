@@ -47,9 +47,3 @@ struct AllStarButton: View {
         }
     }
 }
-
-struct AllStarButton_Previews: PreviewProvider {
-    static var previews: some View {
-        AllStarButton()
-    }
-}

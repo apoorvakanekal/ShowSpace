@@ -24,3 +24,5 @@ struct Rating: Codable{
 struct Photo : Codable{
     var medium: String
 }
+
+

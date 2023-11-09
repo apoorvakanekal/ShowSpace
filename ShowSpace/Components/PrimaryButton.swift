@@ -53,4 +53,3 @@ struct PrimaryButton_Previews: PreviewProvider {
         PrimaryButton()
     }
 }
-
