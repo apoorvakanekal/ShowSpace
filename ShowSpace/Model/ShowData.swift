@@ -25,4 +25,10 @@ struct Photo : Codable{
     var medium: String
 }
 
+struct ShowState: Codable{
+    var id: Int
+    var isAddedToList: Bool
+    var isAddedToAllStars: Bool
+}
+
 

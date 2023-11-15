@@ -2,62 +2,65 @@
 //  AccountView.swift
 //  ShowSpace
 //
-//  Created by Apoorva Kanekal on 11/9/23.
+//  Created by Apoorva Kanekal on 11/13/23.
 //
 
 import Foundation
 import SwiftUI
 
 struct AccountView: View {
-    
-    @State private var email: String = ""
-    @State private var password: String = ""
-    
     var body: some View {
         ZStack{
             DesignConstants.bgColor
                 .ignoresSafeArea()
-            ZStack(alignment: .topLeading){
-                VStack{
-                    VStack (spacing: 40){
-                        ZStack{
-                            Ellipse()
-                                .frame(width: 510, height: 478)
-                                .padding(.leading, -200)
-                                .foregroundColor(Color("bright purple"))
-                                .padding(.top, -200)
+            VStack{
+                HStack(alignment:.center) {
+                    Circle()
+                        .frame(width: 120, height: 70)
+                    Spacer()
+                    VStack(alignment: .leading){
+                        Text("Name")
+                            .foregroundColor(DesignConstants.textColor)
+                            .font(.headline)
+                            .frame(alignment:.leading)
+                            .padding(.vertical, 10)
+                        Button {
                             
-                            Ellipse()
-                                .frame(width: 458, height: 420)
-                                .padding(.trailing, -500)
-                                .foregroundColor(Color("show-yellow"))
-                                .padding(.top, -200)
-                            
-                            Text("Sign \nIn")
-                                .foregroundColor(DesignConstants.textColor)
-                                .font(.largeTitle)
-                                .fontWeight(.bold)
-                                .multilineTextAlignment(.leading)
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                .padding(.leading, 20)
-                        }
-                        VStack (spacing: 30){
-                            
-                            VStack (spacing: 30){
-                                CustomTextField(placeHolder: "Email", imageName: "envelope", tOpacity: 0.6, value: $email)
-                                CustomTextField(placeHolder: "Password", imageName: "lock", tOpacity: 0.6, value: $password)
+                        } label: {
+                            ZStack (alignment: .leading){
+                                Rectangle()
+                                    .frame(height:30)
+                                    .cornerRadius(3)
+                                    .foregroundColor(Color("cool purple"))
+                                
+                                Text("Edit profile")
+                                    .foregroundColor(DesignConstants.textColor)
+                                    .font(.caption)
+                                    .frame(alignment:.leading)
+                                    .padding(.leading, 20)
                             }
-                            VStack (alignment: .trailing){
-                                Button(action:{}, label:{
-                                   CustomButton(title: "Sign In", bgColor: "cool purple")
-                                })
-                            }
-                            .padding(.horizontal, 20)
                         }
                     }
                 }
+                Divider()
+                Spacer()
+                HStack{
+                    Text("All Stars")
+                        .foregroundColor(DesignConstants.textColor)
+                    Spacer()
+                    Text ("My List")
+                        .foregroundColor(DesignConstants.textColor)
+                }
+                .padding(.horizontal, 60)
+                .padding(.bottom, 500)
             }
+            .padding(.all, DesignConstants.showPadding)
         }
     }
 }
 
+struct AccountView_Previews: PreviewProvider {
+    static var previews: some View {
+        AccountView()
+    }
+}

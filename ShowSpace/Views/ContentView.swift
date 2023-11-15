@@ -26,7 +26,7 @@ struct ContentView: View {
                     Label("Search", systemImage: "magnifyingglass")
                 }
                 .environment(\.colorScheme, .dark)
-            AccountView()
+            LogInView()
                 .toolbarBackground(DesignConstants.bgColor, for: .tabBar)
                 .tabItem {
                     Label("Account", systemImage: "person")

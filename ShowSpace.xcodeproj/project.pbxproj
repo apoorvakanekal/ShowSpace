@@ -16,9 +16,11 @@
 		1724DA792AEA26A50027E472 /* ShowSpaceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1724DA782AEA26A50027E472 /* ShowSpaceUITestsLaunchTests.swift */; };
 		1724DA8B2AEA2BC90027E472 /* ShowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1724DA8A2AEA2BC90027E472 /* ShowViewModel.swift */; };
 		1724DA8D2AEB07EC0027E472 /* ShowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1724DA8C2AEB07EC0027E472 /* ShowData.swift */; };
-		175576152AFCC4F500859952 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175576142AFCC4F500859952 /* AccountView.swift */; };
+		175576152AFCC4F500859952 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175576142AFCC4F500859952 /* LogInView.swift */; };
 		175576182AFCC8EA00859952 /* TextInputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175576172AFCC8EA00859952 /* TextInputs.swift */; };
-		1755761A2AFD4B0700859952 /* Added and Ratings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175576192AFD4B0700859952 /* Added and Ratings.swift */; };
+		1771DD762B0338EB007A704B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1771DD752B0338EB007A704B /* SignUpView.swift */; };
+		1771DD782B0341D5007A704B /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1771DD772B0341D5007A704B /* AccountView.swift */; };
+		1771DD7A2B0404EF007A704B /* ShowDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1771DD792B0404EF007A704B /* ShowDetailsViewModel.swift */; };
 		17D6D6382AF043AE003D57A6 /* ShowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D6D6372AF043AE003D57A6 /* ShowView.swift */; };
 		17D6D63A2AF05821003D57A6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D6D6392AF05821003D57A6 /* HomeView.swift */; };
 		17D6D63C2AF05850003D57A6 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D6D63B2AF05850003D57A6 /* SearchView.swift */; };
@@ -59,9 +61,11 @@
 		1724DA782AEA26A50027E472 /* ShowSpaceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSpaceUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1724DA8A2AEA2BC90027E472 /* ShowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowViewModel.swift; sourceTree = "<group>"; };
 		1724DA8C2AEB07EC0027E472 /* ShowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowData.swift; sourceTree = "<group>"; };
-		175576142AFCC4F500859952 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		175576142AFCC4F500859952 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		175576172AFCC8EA00859952 /* TextInputs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputs.swift; sourceTree = "<group>"; };
-		175576192AFD4B0700859952 /* Added and Ratings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Added and Ratings.swift"; sourceTree = "<group>"; };
+		1771DD752B0338EB007A704B /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		1771DD772B0341D5007A704B /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		1771DD792B0404EF007A704B /* ShowDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsViewModel.swift; sourceTree = "<group>"; };
 		17D6D6372AF043AE003D57A6 /* ShowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowView.swift; sourceTree = "<group>"; };
 		17D6D6392AF05821003D57A6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		17D6D63B2AF05850003D57A6 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -164,7 +168,9 @@
 				17D6D6392AF05821003D57A6 /* HomeView.swift */,
 				17D6D63B2AF05850003D57A6 /* SearchView.swift */,
 				17D6D6372AF043AE003D57A6 /* ShowView.swift */,
-				175576142AFCC4F500859952 /* AccountView.swift */,
+				175576142AFCC4F500859952 /* LogInView.swift */,
+				1771DD752B0338EB007A704B /* SignUpView.swift */,
+				1771DD772B0341D5007A704B /* AccountView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,7 +179,6 @@
 			isa = PBXGroup;
 			children = (
 				1724DA8C2AEB07EC0027E472 /* ShowData.swift */,
-				175576192AFD4B0700859952 /* Added and Ratings.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				1724DA8A2AEA2BC90027E472 /* ShowViewModel.swift */,
+				1771DD792B0404EF007A704B /* ShowDetailsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -330,17 +336,19 @@
 				17D6D6382AF043AE003D57A6 /* ShowView.swift in Sources */,
 				1724DA8D2AEB07EC0027E472 /* ShowData.swift in Sources */,
 				17D6D6432AF1D75D003D57A6 /* PrimaryButton.swift in Sources */,
+				1771DD782B0341D5007A704B /* AccountView.swift in Sources */,
 				17D6D6472AF41DEE003D57A6 /* Genre.swift in Sources */,
 				17D6D6402AF1D27D003D57A6 /* DesignConstants.swift in Sources */,
 				1724DA5D2AEA269E0027E472 /* ContentView.swift in Sources */,
 				17D6D63C2AF05850003D57A6 /* SearchView.swift in Sources */,
+				1771DD7A2B0404EF007A704B /* ShowDetailsViewModel.swift in Sources */,
 				17D6D63A2AF05821003D57A6 /* HomeView.swift in Sources */,
 				1724DA5B2AEA269E0027E472 /* ShowSpaceApp.swift in Sources */,
 				175576182AFCC8EA00859952 /* TextInputs.swift in Sources */,
 				1724DA8B2AEA2BC90027E472 /* ShowViewModel.swift in Sources */,
+				1771DD762B0338EB007A704B /* SignUpView.swift in Sources */,
 				17D6D6452AF1DF8C003D57A6 /* AllStarButton.swift in Sources */,
-				175576152AFCC4F500859952 /* AccountView.swift in Sources */,
-				1755761A2AFD4B0700859952 /* Added and Ratings.swift in Sources */,
+				175576152AFCC4F500859952 /* LogInView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

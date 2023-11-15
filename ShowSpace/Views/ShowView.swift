@@ -9,11 +9,15 @@ import SwiftUI
 
 struct ShowView: View {
     
+    @AppStorage ("rating") private var rating: String = ""
+    
+    @ObservedObject var viewModel: ShowDetailsViewModel
     var show: Show
     
-    @State private var rating: String = ""
-    @AppStorage("isRated") private var isRated = false
-    @AppStorage("userRating") private var userRating: String = ""
+    init(show: Show) {
+        self.show = show
+        self.viewModel = ShowDetailsViewModel(show: show)
+    }
     
     
     var body: some View {
@@ -41,8 +45,13 @@ struct ShowView: View {
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
                         HStack{
-                            PrimaryButton()
-                            AllStarButton()
+                            ShowsButton(buttonTitle: viewModel.allShowsTitle, imageName: viewModel.allShowsImage, background: Color("bright purple")) {
+                                print("button tapped")
+                                viewModel.saveToDefaults(showStateType: .allShows)
+                            }
+                            ShowsButton(buttonTitle: viewModel.allStarsTitle, imageName: viewModel.allStarsImage, background: Color("show-yellow")) {
+                                viewModel.saveToDefaults(showStateType: .allStars)
+                            }
                         }
                     }
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 10))

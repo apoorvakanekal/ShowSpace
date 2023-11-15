@@ -8,48 +8,40 @@
 import Foundation
 import SwiftUI
 
-struct PrimaryButton: View {
+struct ShowsButton: View {
     
-    @AppStorage("isAddedToList") private var isAddedToList = false
+    private var buttonTitle: String
+    private var imageName: String
+    private var backgroundColor: Color
+    private var onClick: (() -> Void)?
+
+    init(buttonTitle: String, imageName: String,  background: Color, onClick: (() -> Void)? = nil) {
+        self.buttonTitle = buttonTitle
+        self.imageName = imageName
+        self.backgroundColor = background
+        self.onClick = onClick
+    }
     
-    
-    var body: some View{
-        Button(action: {
-            self.isAddedToList.toggle()
-        }) {
+    var body: some View {
+        Button {
+            onClick?()
+        } label: {
             ZStack{
                 RoundedRectangle(cornerRadius: 3.0)
-                    .foregroundColor((Color("bright purple")))
+                    .foregroundColor(backgroundColor)
                     .frame(height: 45)
                 HStack{
-                    if isAddedToList{
-                        Text("Added to List")
-                            .foregroundColor(.white)
-                            .font(.caption2)
-                            .fixedSize(horizontal: false, vertical: true)
-                        Spacer()
-                        Image(systemName: "checkmark")
-                            .foregroundColor(.white)
-                            .imageScale(.small)
-                    }
-                    else{
-                        Text("Add to List?")
-                            .foregroundColor(.white)
-                            .font(.caption2)
-                            .fixedSize(horizontal: false, vertical: true)
-                        Spacer()
-                        Image(systemName: "plus")
-                            .foregroundColor(.white)
-                            .imageScale(.small)
-                    }
+                    Text(buttonTitle)
+                        .foregroundColor(.white)
+                        .font(.caption2)
+                        .fixedSize(horizontal: false, vertical: true)
+                    Spacer()
+                    Image(systemName: imageName)
+                        .foregroundColor(.white)
+                        .imageScale(.small)
                 }
                 .padding(10)
             }
         }
-    }
-}
-struct PrimaryButton_Previews: PreviewProvider {
-    static var previews: some View {
-        PrimaryButton()
     }
 }
