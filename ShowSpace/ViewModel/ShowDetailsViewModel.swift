@@ -66,7 +66,6 @@ class ShowDetailsViewModel: ObservableObject {
                 showStates.append(newShowState)
                 
             }
-
             
             if let encodedData =  try? jsonEncoder.encode(showStates) {
                 UserDefaults.standard.setValue(encodedData, forKey: "showState")
@@ -91,14 +90,13 @@ class ShowDetailsViewModel: ObservableObject {
             showState.isAddedToAllStars = !showState.isAddedToAllStars
         }
         updateButtonInterface()
-
     }
     
-    func loadFromDefaults(showId: Int) {
+    func loadFromDefaults() {
         let jsonDecoder = JSONDecoder()
         if let data = UserDefaults.standard.object(forKey: "showState") as? Data,
            let showStates = try? jsonDecoder.decode([ShowState].self, from: data),
-           let show = showStates.filter({ $0.id == showId }).first {
+           let show = showStates.filter({ $0.id == show.id }).first {
             
             showState.isAddedToList = show.isAddedToList
             showState.isAddedToAllStars = show.isAddedToAllStars

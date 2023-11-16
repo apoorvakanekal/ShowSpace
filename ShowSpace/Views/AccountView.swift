@@ -55,6 +55,7 @@ struct AccountView: View {
                 .padding(.bottom, 500)
             }
             .padding(.all, DesignConstants.showPadding)
+            .navigationBarBackButtonHidden(true)
         }
     }
 }

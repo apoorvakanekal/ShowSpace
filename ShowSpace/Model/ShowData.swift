@@ -31,4 +31,8 @@ struct ShowState: Codable{
     var isAddedToAllStars: Bool
 }
 
+//struct ShowStateRating: Codable{
+//    var rating: Double
+//}
+
 

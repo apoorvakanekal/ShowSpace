@@ -10,13 +10,13 @@ import SwiftUI
 struct ShowView: View {
     
     @AppStorage ("rating") private var rating: String = ""
-    
     @ObservedObject var viewModel: ShowDetailsViewModel
     var show: Show
     
     init(show: Show) {
         self.show = show
         self.viewModel = ShowDetailsViewModel(show: show)
+        viewModel.loadFromDefaults()
     }
     
     
@@ -46,7 +46,6 @@ struct ShowView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         HStack{
                             ShowsButton(buttonTitle: viewModel.allShowsTitle, imageName: viewModel.allShowsImage, background: Color("bright purple")) {
-                                print("button tapped")
                                 viewModel.saveToDefaults(showStateType: .allShows)
                             }
                             ShowsButton(buttonTitle: viewModel.allStarsTitle, imageName: viewModel.allStarsImage, background: Color("show-yellow")) {
