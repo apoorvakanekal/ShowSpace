@@ -22,7 +22,11 @@
 		1771DD782B0341D5007A704B /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1771DD772B0341D5007A704B /* AccountView.swift */; };
 		1771DD7A2B0404EF007A704B /* ShowDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1771DD792B0404EF007A704B /* ShowDetailsViewModel.swift */; };
 		1771DDEE2B059E91007A704B /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1771DDED2B059E91007A704B /* UserProfile.swift */; };
-		1771DDF02B059F9D007A704B /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1771DDEF2B059F9D007A704B /* UserViewModel.swift */; };
+		1771DDF02B059F9D007A704B /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1771DDEF2B059F9D007A704B /* UserProfileViewModel.swift */; };
+		1771DDF42B05B1EB007A704B /* Helpers in Frameworks */ = {isa = PBXBuildFile; productRef = 1771DDF32B05B1EB007A704B /* Helpers */; };
+		1771DDF62B05B1EB007A704B /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 1771DDF52B05B1EB007A704B /* UIComponents */; };
+		1771DDF82B05B493007A704B /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1771DDF72B05B493007A704B /* EditProfileView.swift */; };
+		1771DDFA2B05E17A007A704B /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1771DDF92B05E17A007A704B /* AccountViewModel.swift */; };
 		17D6D6382AF043AE003D57A6 /* ShowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D6D6372AF043AE003D57A6 /* ShowView.swift */; };
 		17D6D63A2AF05821003D57A6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D6D6392AF05821003D57A6 /* HomeView.swift */; };
 		17D6D63C2AF05850003D57A6 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D6D63B2AF05850003D57A6 /* SearchView.swift */; };
@@ -68,7 +72,10 @@
 		1771DD772B0341D5007A704B /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		1771DD792B0404EF007A704B /* ShowDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsViewModel.swift; sourceTree = "<group>"; };
 		1771DDED2B059E91007A704B /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
-		1771DDEF2B059F9D007A704B /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		1771DDEF2B059F9D007A704B /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
+		1771DDF12B05B106007A704B /* UIComponents */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UIComponents; sourceTree = "<group>"; };
+		1771DDF72B05B493007A704B /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		1771DDF92B05E17A007A704B /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		17D6D6372AF043AE003D57A6 /* ShowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowView.swift; sourceTree = "<group>"; };
 		17D6D6392AF05821003D57A6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		17D6D63B2AF05850003D57A6 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -82,6 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1771DDF62B05B1EB007A704B /* UIComponents in Frameworks */,
+				1771DDF42B05B1EB007A704B /* Helpers in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,10 +114,12 @@
 		1724DA4E2AEA269E0027E472 = {
 			isa = PBXGroup;
 			children = (
+				1771DDF12B05B106007A704B /* UIComponents */,
 				1724DA592AEA269E0027E472 /* ShowSpace */,
 				1724DA6B2AEA26A40027E472 /* ShowSpaceTests */,
 				1724DA752AEA26A50027E472 /* ShowSpaceUITests */,
 				1724DA582AEA269E0027E472 /* Products */,
+				1771DDF22B05B1EB007A704B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,10 +136,12 @@
 		1724DA592AEA269E0027E472 /* ShowSpace */ = {
 			isa = PBXGroup;
 			children = (
+				1771DE012B05E308007A704B /* User Profile */,
+				1771DE002B05E2EA007A704B /* Account */,
 				17D6D6412AF1D73E003D57A6 /* Components */,
+				1771DDFF2B05E2B8007A704B /* Show */,
+				1771DDFD2B05E290007A704B /* Search */,
 				1724DA852AEA2B3F0027E472 /* Views */,
-				1755760B2AFCC20800859952 /* ViewModel */,
-				1724DA882AEA2B610027E472 /* Model */,
 				1724DA5A2AEA269E0027E472 /* ShowSpaceApp.swift */,
 				1724DA5E2AEA26A40027E472 /* Assets.xcassets */,
 				1724DA602AEA26A40027E472 /* ShowSpace.entitlements */,
@@ -168,32 +181,55 @@
 			children = (
 				1724DA5C2AEA269E0027E472 /* ContentView.swift */,
 				17D6D6392AF05821003D57A6 /* HomeView.swift */,
-				17D6D63B2AF05850003D57A6 /* SearchView.swift */,
-				17D6D6372AF043AE003D57A6 /* ShowView.swift */,
 				175576142AFCC4F500859952 /* LogInView.swift */,
 				1771DD752B0338EB007A704B /* SignUpView.swift */,
-				1771DD772B0341D5007A704B /* AccountView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		1724DA882AEA2B610027E472 /* Model */ = {
+		1771DDF22B05B1EB007A704B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1724DA8C2AEB07EC0027E472 /* ShowData.swift */,
-				1771DDED2B059E91007A704B /* UserProfile.swift */,
 			);
-			path = Model;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1755760B2AFCC20800859952 /* ViewModel */ = {
+		1771DDFD2B05E290007A704B /* Search */ = {
 			isa = PBXGroup;
 			children = (
 				1724DA8A2AEA2BC90027E472 /* ShowViewModel.swift */,
-				1771DD792B0404EF007A704B /* ShowDetailsViewModel.swift */,
-				1771DDEF2B059F9D007A704B /* UserViewModel.swift */,
+				17D6D63B2AF05850003D57A6 /* SearchView.swift */,
 			);
-			path = ViewModel;
+			path = Search;
+			sourceTree = "<group>";
+		};
+		1771DDFF2B05E2B8007A704B /* Show */ = {
+			isa = PBXGroup;
+			children = (
+				17D6D6372AF043AE003D57A6 /* ShowView.swift */,
+				1771DD792B0404EF007A704B /* ShowDetailsViewModel.swift */,
+				1724DA8C2AEB07EC0027E472 /* ShowData.swift */,
+			);
+			path = Show;
+			sourceTree = "<group>";
+		};
+		1771DE002B05E2EA007A704B /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				1771DD772B0341D5007A704B /* AccountView.swift */,
+				1771DDF92B05E17A007A704B /* AccountViewModel.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		1771DE012B05E308007A704B /* User Profile */ = {
+			isa = PBXGroup;
+			children = (
+				1771DDF72B05B493007A704B /* EditProfileView.swift */,
+				1771DDEF2B059F9D007A704B /* UserProfileViewModel.swift */,
+				1771DDED2B059E91007A704B /* UserProfile.swift */,
+			);
+			path = "User Profile";
 			sourceTree = "<group>";
 		};
 		17D6D6412AF1D73E003D57A6 /* Components */ = {
@@ -222,6 +258,10 @@
 			dependencies = (
 			);
 			name = ShowSpace;
+			packageProductDependencies = (
+				1771DDF32B05B1EB007A704B /* Helpers */,
+				1771DDF52B05B1EB007A704B /* UIComponents */,
+			);
 			productName = ShowSpace;
 			productReference = 1724DA572AEA269E0027E472 /* ShowSpace.app */;
 			productType = "com.apple.product-type.application";
@@ -336,6 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1771DDF82B05B493007A704B /* EditProfileView.swift in Sources */,
 				17D6D6382AF043AE003D57A6 /* ShowView.swift in Sources */,
 				1724DA8D2AEB07EC0027E472 /* ShowData.swift in Sources */,
 				17D6D6432AF1D75D003D57A6 /* ShowsButton.swift in Sources */,
@@ -345,12 +386,13 @@
 				17D6D6402AF1D27D003D57A6 /* DesignConstants.swift in Sources */,
 				1724DA5D2AEA269E0027E472 /* ContentView.swift in Sources */,
 				17D6D63C2AF05850003D57A6 /* SearchView.swift in Sources */,
+				1771DDFA2B05E17A007A704B /* AccountViewModel.swift in Sources */,
 				1771DD7A2B0404EF007A704B /* ShowDetailsViewModel.swift in Sources */,
 				17D6D63A2AF05821003D57A6 /* HomeView.swift in Sources */,
 				1724DA5B2AEA269E0027E472 /* ShowSpaceApp.swift in Sources */,
 				175576182AFCC8EA00859952 /* TextInputs.swift in Sources */,
 				1724DA8B2AEA2BC90027E472 /* ShowViewModel.swift in Sources */,
-				1771DDF02B059F9D007A704B /* UserViewModel.swift in Sources */,
+				1771DDF02B059F9D007A704B /* UserProfileViewModel.swift in Sources */,
 				1771DD762B0338EB007A704B /* SignUpView.swift in Sources */,
 				175576152AFCC4F500859952 /* LogInView.swift in Sources */,
 			);
@@ -709,6 +751,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1771DDF32B05B1EB007A704B /* Helpers */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Helpers;
+		};
+		1771DDF52B05B1EB007A704B /* UIComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIComponents;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1724DA4F2AEA269E0027E472 /* Project object */;
 }

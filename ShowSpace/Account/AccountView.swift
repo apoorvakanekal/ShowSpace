@@ -9,6 +9,9 @@ import Foundation
 import SwiftUI
 
 struct AccountView: View {
+//    @State var isSettingViewActive = false
+    @ObservedObject var viewModel = AccountViewModel()
+    
     var body: some View {
         ZStack{
             DesignConstants.bgColor
@@ -24,8 +27,8 @@ struct AccountView: View {
                             .font(.headline)
                             .frame(alignment:.leading)
                             .padding(.vertical, 10)
-                        Button {
-                            
+                        NavigationLink {
+//                            viewModel.setDataForSettingsView()
                         } label: {
                             ZStack (alignment: .leading){
                                 Rectangle()
