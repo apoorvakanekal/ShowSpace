@@ -12,7 +12,7 @@ struct CustomTextField: View {
     
     var placeHolder: String
     var imageName: String
-    var tOpacity: Double
+    var opacity: Double
     @Binding var value: String
     
     var body: some View {
@@ -22,13 +22,13 @@ struct CustomTextField: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 20, height: 20)
                 .padding(.leading, 20)
-                .foregroundColor(Color(DesignConstants.textColor.opacity(tOpacity)))
+                .foregroundColor(Color(DesignConstants.textColor.opacity(opacity)))
             
             if placeHolder == "Password" || placeHolder == "Confirm Password"{
                 ZStack (alignment: .leading){
                     if value.isEmpty {
                         Text(placeHolder)
-                            .foregroundColor(Color(DesignConstants.textColor.opacity(tOpacity)))
+                            .foregroundColor(Color(DesignConstants.textColor.opacity(opacity)))
                             .padding(.leading, 12)
                             .font(.subheadline)
                     }
@@ -42,7 +42,7 @@ struct CustomTextField: View {
                 ZStack (alignment: .leading){
                     if value.isEmpty {
                         Text(placeHolder)
-                            .foregroundColor(Color(DesignConstants.textColor.opacity(tOpacity)))
+                            .foregroundColor(Color(DesignConstants.textColor.opacity(opacity)))
                             .padding(.leading, 12)
                             .font(.subheadline)
                     }
@@ -57,7 +57,7 @@ struct CustomTextField: View {
         .overlay(
         Divider()
             .overlay(
-                Color(DesignConstants.textColor).opacity(tOpacity)
+                Color(DesignConstants.textColor).opacity(opacity)
             ).padding(.horizontal, 20)
         , alignment: .bottom
         )

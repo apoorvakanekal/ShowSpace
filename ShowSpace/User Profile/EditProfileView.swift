@@ -18,11 +18,12 @@ struct EditProfileView: View {
     @State private var photoGalleryImage: Image?
     
     var body: some View {
-        ZStack{
-            DesignConstants.bgColor
-                .ignoresSafeArea()
-            DefaultNavigationView(title: "Settings") {
-                VStack {
+        
+        NavigationView{
+            ZStack{
+                DesignConstants.bgColor
+                    .ignoresSafeArea()
+                VStack{
                     Spacer()
                     HStack {
                         Text("Name: ")
@@ -30,9 +31,7 @@ struct EditProfileView: View {
                             .font(.headline)
                         Spacer()
                     }
-                    
-                    TextField("Enter Name", text: $userName)
-                        .background(Color(DesignConstants.textColor))
+                    CustomTextField(placeHolder: "Enter name", imageName: "", opacity: 1.0, value: $userName)
                         .padding(.bottom, 24)
                     
                     if let photoGalleryImage, userProfileViewModel.imageState == .loaded {
@@ -49,6 +48,7 @@ struct EditProfileView: View {
                     }
                     
                     PhotosPicker(userProfileViewModel.imageTtile, selection: $imageItem, matching: .images)
+                        .foregroundColor(DesignConstants.textColor)
                     
                     Spacer()
                     

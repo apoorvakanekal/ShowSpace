@@ -46,8 +46,8 @@ struct LogInView: View {
                             VStack (spacing: 30){
                                 
                                 VStack (spacing: 30){
-                                    CustomTextField(placeHolder: "Email", imageName: "envelope", tOpacity: 0.6, value: $email)
-                                    CustomTextField(placeHolder: "Password", imageName: "lock", tOpacity: 0.6, value: $password)
+                                    CustomTextField(placeHolder: "Email", imageName: "envelope", opacity: 0.6, value: $email)
+                                    CustomTextField(placeHolder: "Password", imageName: "lock", opacity: 0.6, value: $password)
                                 }
                                 VStack (alignment: .trailing){
                                     NavigationLink {

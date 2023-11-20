@@ -42,10 +42,10 @@ struct SignUpView: View {
                         VStack (spacing: 20){
                             
                             VStack (spacing: 30){
-                                CustomTextField(placeHolder: "Name", imageName: "person", tOpacity: 1.0, value: $name)
-                                CustomTextField(placeHolder: "Email", imageName: "lock", tOpacity: 1.0, value: $password)
-                                CustomTextField(placeHolder: "Password", imageName: "lock", tOpacity: 1.0, value: $password)
-                                CustomTextField(placeHolder: "Confirm Password", imageName: "lock", tOpacity: 1.0, value: $cpassword)
+                                CustomTextField(placeHolder: "Name", imageName: "person", opacity: 1.0, value: $name)
+                                CustomTextField(placeHolder: "Email", imageName: "lock", opacity: 1.0, value: $email)
+                                CustomTextField(placeHolder: "Password", imageName: "lock", opacity: 1.0, value: $password)
+                                CustomTextField(placeHolder: "Confirm Password", imageName: "lock", opacity: 1.0, value: $cpassword)
                             }
                             VStack (alignment: .trailing){
                                 NavigationLink {

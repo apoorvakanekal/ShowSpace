@@ -85,7 +85,7 @@ struct ShowView: View {
                     }
                     .padding(EdgeInsets(top: 0, leading: 25, bottom: 0, trailing: 0))
                     VStack(alignment: .center){
-                        CustomTextField(placeHolder: "Your Rating / 10", imageName: "star", tOpacity: 1.0, value: $rating)
+                        CustomTextField(placeHolder: "Your Rating / 10", imageName: "star", opacity: 1.0, value: $rating)
                     }
                     .padding(EdgeInsets(top: 0, leading: 40, bottom: 0, trailing: 0))
                 }
