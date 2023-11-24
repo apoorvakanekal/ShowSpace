@@ -13,6 +13,7 @@ struct AccountView: View {
     @State var isSettingViewActive = false
     @ObservedObject var viewModel = AccountViewModel()
     
+    
     var body: some View {
         
         NavigationStack {

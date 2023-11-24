@@ -27,7 +27,9 @@ class ShowDetailsViewModel: ObservableObject {
     @Published var allShowsImage = ""
     @Published var allStarsTitle = ""
     @Published var allStarsImage = ""
+    @Published var userRating = ""
 
+   
     
     func updateButtonInterface() {
         allShowsTitle = showState.isAddedToList ? "Added to List" : "Add to List?"
@@ -35,6 +37,11 @@ class ShowDetailsViewModel: ObservableObject {
         allStarsTitle = showState.isAddedToAllStars ? "Added to All Stars" : "Add to All Stars?"
         allStarsImage = showState.isAddedToAllStars  ? "checkmark" : "plus"
     }
+    
+    func userRatingHandling() {
+        print("hi")
+    }
+    
     
     func saveToDefaults(showStateType: ShowStateType) {
         
@@ -46,6 +53,7 @@ class ShowDetailsViewModel: ObservableObject {
         if let data = UserDefaults.standard.object(forKey: "showState") as? Data,
            var showStates = try? jsonDecoder.decode([ShowState].self, from: data) {
            
+            print(showStates)
             if let indexShow = showStates.firstIndex(where: { $0.id == show.id }) {
                 
                 var showToUpdate = showStates[indexShow]

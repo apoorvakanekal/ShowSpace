@@ -25,14 +25,14 @@ struct Photo : Codable{
     var medium: String
 }
 
-struct ShowState: Codable{
+struct ShowState: Codable, Identifiable{
     var id: Int
     var isAddedToList: Bool
     var isAddedToAllStars: Bool
 }
 
-//struct ShowStateRating: Codable{
-//    var rating: Double
-//}
+struct ShowStateRating: Codable{
+    var UserRating: String
+}
 
 

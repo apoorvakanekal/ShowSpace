@@ -63,6 +63,7 @@ struct SearchView: View {
     }
     
     var searchResults: [Show] {
+        print("entered search")
         if searchText.isEmpty {
             return showViewModel.shows
         }
