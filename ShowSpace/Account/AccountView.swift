@@ -11,6 +11,8 @@ import UIComponents
 struct AccountView: View {
     
     @State var isSettingViewActive = false
+    @State private var isShowingAllStarsShows = true
+    @State private var isShowingAddedToListShows = false
     @ObservedObject var viewModel = AccountViewModel()
     
     
@@ -18,9 +20,6 @@ struct AccountView: View {
         
         NavigationStack {
             NavigationView{
-                ZStack{
-                    DesignConstants.bgColor
-                        .ignoresSafeArea()
                     VStack {
                         if let data = viewModel.profileData, let profileImage = UIImage(data: data) {
                             Image(uiImage: profileImage)
@@ -43,6 +42,7 @@ struct AccountView: View {
                             .font(.title3)
                             .fontWeight(.semibold)
                             .foregroundColor(DesignConstants.textColor)
+                            .padding(.bottom, 10)
                         Spacer()
                         Divider()
                             .overlay(Color("cool purple"))
@@ -50,49 +50,95 @@ struct AccountView: View {
                             Text("Currently Watching")
                                 .foregroundColor(DesignConstants.textColor)
                                 .font(.headline)
-                                .padding(.vertical, DesignConstants.showPadding)
+                                .padding(.vertical, 10)
                             RoundedRectangle(cornerRadius: 5.0)
                                 .frame(height: 100)
-                                .padding(.bottom, DesignConstants.showPadding)
+                                .padding(.bottom, 10)
                             Divider()
                                 .overlay(Color("cool purple"))
                             HStack{
-                                Text("All Stars")
-                                    .foregroundColor(DesignConstants.textColor)
-                                    .font(.headline)
-                                    .padding(.vertical, DesignConstants.showPadding)
-                                Text("My List")
-                                    .foregroundColor(DesignConstants.textColor)
-                                    .font(.headline)
-                                    .padding(.vertical, DesignConstants.showPadding)
-                                    .padding(.leading, 16)
+                                Button(action: {
+                                    isShowingAllStarsShows.toggle()
+                                    isShowingAddedToListShows.toggle()
+                                }) {
+                                    if isShowingAllStarsShows{
+                                        Text("All Stars")
+                                            .padding()
+                                            .background(Color("cool purple"))
+                                            .foregroundColor(.white)
+                                            .cornerRadius(5)
+                                    }
+                                    else{
+                                        Text("All Stars")
+                                            .padding()
+                                            .background(Color("cool purple"))
+                                            .foregroundColor(.white)
+                                            .cornerRadius(5)
+                                            .opacity(0.3)
+                                    }
+                                }
+                                .padding(.vertical, 10)
+                                
+                                Button(action: {
+                                    isShowingAddedToListShows.toggle()
+                                    isShowingAllStarsShows.toggle()
+                                }) {
+                                    if isShowingAddedToListShows{
+                                        Text("My List")
+                                            .padding()
+                                            .background(Color("cool purple"))
+                                            .foregroundColor(.white)
+                                            .cornerRadius(5)
+                                    }
+                                    else{
+                                        Text("My List")
+                                            .padding()
+                                            .background(Color("cool purple"))
+                                            .foregroundColor(.white)
+                                            .cornerRadius(5)
+                                            .opacity(0.3)
+                                    }
+                                }
+                                .padding(.vertical, 10)
+                            }
+                            
+                            if isShowingAllStarsShows {
+                                AllStarsShowsListView()
+                                    .frame(maxWidth: .infinity)
+                                    .background(DesignConstants.bgColor)
+                                    .cornerRadius(5)
+                                    .environment(\.colorScheme, .dark)
+                            }
+                            if isShowingAddedToListShows {
+                                AddedToListShowsListView()
+                                    .frame(maxWidth: .infinity)
+                                    .background(DesignConstants.bgColor)
+                                    .cornerRadius(5)
+                                    .environment(\.colorScheme, .dark)
                             }
                         }
-                        .padding(.bottom, 250)
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                    .padding(30)
                 }
-                .padding(30)
+                .toolbar{
+                    Button{
+                        viewModel.setDataForSettingsView()
+                        isSettingViewActive.toggle()
+                    }label: {
+                        Image(systemName: "person")
+                            .padding(DesignConstants.showPadding)
+                            .foregroundColor(DesignConstants.textColor)
+                    }
                 }
-            }
-            .toolbar {
-                Button {
-                    viewModel.setDataForSettingsView()
-                    isSettingViewActive.toggle()
-                } label: {
-                    Image(systemName: "person")
-                        .padding(DesignConstants.showPadding)
-                        .foregroundColor(DesignConstants.textColor)
+                .navigationDestination(isPresented: $isSettingViewActive) {
+                    EditProfileView(userProfileViewModel: viewModel.userProfileViewModel)
                 }
-            }
-            .navigationDestination(isPresented: $isSettingViewActive) {
-                EditProfileView(userProfileViewModel: viewModel.userProfileViewModel)
-            }
         }
         .navigationBarBackButtonHidden(true)
+        .environment(\.colorScheme, .dark)
     }
-
 }
-
+                    
 struct AccountView_Previews: PreviewProvider {
     static var previews: some View {
         AccountView()

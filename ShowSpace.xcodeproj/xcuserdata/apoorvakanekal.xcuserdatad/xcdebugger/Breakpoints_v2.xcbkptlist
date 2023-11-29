@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "95D54FC4-AB67-4E3D-B16D-99C347B3224A"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C31CFB72-EC51-43B4-A720-037EC966AD3B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShowSpace/Account/AccountView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "AccountView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "C31CFB72-EC51-43B4-A720-037EC966AD3B - cc1f250e629d266a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ShowSpace.AccountView.init() -&gt; ShowSpace.AccountView"
+                  moduleName = "ShowSpace"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apoorvakanekal/Documents/mobile%20app%20dev/ShowSpace/ShowSpace/Account/AccountView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "195">
+               </Location>
+               <Location
+                  uuid = "C31CFB72-EC51-43B4-A720-037EC966AD3B - b60cc46e863c00e7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ShowSpace.AccountView.init(isSettingViewActive: Swift.Bool, viewModel: ShowSpace.AccountViewModel) -&gt; ShowSpace.AccountView"
+                  moduleName = "ShowSpace"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apoorvakanekal/Documents/mobile%20app%20dev/ShowSpace/ShowSpace/Account/AccountView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "15">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "25CAACAB-552C-489A-A7B8-F025F5B7CEF5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShowSpace/Account/AccountView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "AccountView"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

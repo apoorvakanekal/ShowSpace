@@ -18,6 +18,7 @@
 		1724DA8D2AEB07EC0027E472 /* ShowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1724DA8C2AEB07EC0027E472 /* ShowData.swift */; };
 		175576152AFCC4F500859952 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175576142AFCC4F500859952 /* LogInView.swift */; };
 		175576182AFCC8EA00859952 /* TextInputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175576172AFCC8EA00859952 /* TextInputs.swift */; };
+		1767F7142B16B39C00BDF197 /* StarRateView in Frameworks */ = {isa = PBXBuildFile; productRef = 1767F7132B16B39C00BDF197 /* StarRateView */; };
 		1771DD762B0338EB007A704B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1771DD752B0338EB007A704B /* SignUpView.swift */; };
 		1771DD782B0341D5007A704B /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1771DD772B0341D5007A704B /* AccountView.swift */; };
 		1771DD7A2B0404EF007A704B /* ShowDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1771DD792B0404EF007A704B /* ShowDetailsViewModel.swift */; };
@@ -28,6 +29,7 @@
 		1771DDF82B05B493007A704B /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1771DDF72B05B493007A704B /* EditProfileView.swift */; };
 		1771DDFA2B05E17A007A704B /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1771DDF92B05E17A007A704B /* AccountViewModel.swift */; };
 		178A95A02B0EB92600578129 /* AllStarsShowsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178A959F2B0EB92600578129 /* AllStarsShowsListView.swift */; };
+		17C6F87E2B1448D2004B623E /* AddedToListShowsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C6F87D2B1448D2004B623E /* AddedToListShowsListView.swift */; };
 		17D6D6382AF043AE003D57A6 /* ShowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D6D6372AF043AE003D57A6 /* ShowView.swift */; };
 		17D6D63A2AF05821003D57A6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D6D6392AF05821003D57A6 /* HomeView.swift */; };
 		17D6D63C2AF05850003D57A6 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D6D63B2AF05850003D57A6 /* SearchView.swift */; };
@@ -78,6 +80,7 @@
 		1771DDF72B05B493007A704B /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		1771DDF92B05E17A007A704B /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		178A959F2B0EB92600578129 /* AllStarsShowsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStarsShowsListView.swift; sourceTree = "<group>"; };
+		17C6F87D2B1448D2004B623E /* AddedToListShowsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedToListShowsListView.swift; sourceTree = "<group>"; };
 		17D6D6372AF043AE003D57A6 /* ShowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowView.swift; sourceTree = "<group>"; };
 		17D6D6392AF05821003D57A6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		17D6D63B2AF05850003D57A6 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -91,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1767F7142B16B39C00BDF197 /* StarRateView in Frameworks */,
 				1771DDF62B05B1EB007A704B /* UIComponents in Frameworks */,
 				1771DDF42B05B1EB007A704B /* Helpers in Frameworks */,
 			);
@@ -221,6 +225,7 @@
 				1771DD772B0341D5007A704B /* AccountView.swift */,
 				1771DDF92B05E17A007A704B /* AccountViewModel.swift */,
 				178A959F2B0EB92600578129 /* AllStarsShowsListView.swift */,
+				17C6F87D2B1448D2004B623E /* AddedToListShowsListView.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 			packageProductDependencies = (
 				1771DDF32B05B1EB007A704B /* Helpers */,
 				1771DDF52B05B1EB007A704B /* UIComponents */,
+				1767F7132B16B39C00BDF197 /* StarRateView */,
 			);
 			productName = ShowSpace;
 			productReference = 1724DA572AEA269E0027E472 /* ShowSpace.app */;
@@ -337,6 +343,9 @@
 				Base,
 			);
 			mainGroup = 1724DA4E2AEA269E0027E472;
+			packageReferences = (
+				1767F7122B16B39C00BDF197 /* XCRemoteSwiftPackageReference "StarRateView" */,
+			);
 			productRefGroup = 1724DA582AEA269E0027E472 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -390,6 +399,7 @@
 				17D6D6402AF1D27D003D57A6 /* DesignConstants.swift in Sources */,
 				1724DA5D2AEA269E0027E472 /* ContentView.swift in Sources */,
 				17D6D63C2AF05850003D57A6 /* SearchView.swift in Sources */,
+				17C6F87E2B1448D2004B623E /* AddedToListShowsListView.swift in Sources */,
 				1771DDFA2B05E17A007A704B /* AccountViewModel.swift in Sources */,
 				1771DD7A2B0404EF007A704B /* ShowDetailsViewModel.swift in Sources */,
 				17D6D63A2AF05821003D57A6 /* HomeView.swift in Sources */,
@@ -756,7 +766,23 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		1767F7122B16B39C00BDF197 /* XCRemoteSwiftPackageReference "StarRateView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/giiiita/StarRateView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
+		1767F7132B16B39C00BDF197 /* StarRateView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1767F7122B16B39C00BDF197 /* XCRemoteSwiftPackageReference "StarRateView" */;
+			productName = StarRateView;
+		};
 		1771DDF32B05B1EB007A704B /* Helpers */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Helpers;

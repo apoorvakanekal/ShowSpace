@@ -1,13 +1,14 @@
 //
-//  AllStarsShowsListView.swift
+//  AddedToListShowsListView.swift
 //  ShowSpace
 //
-//  Created by Apoorva Kanekal on 11/22/23.
+//  Created by Apoorva Kanekal on 11/26/23.
 //
 
+import Foundation
 import SwiftUI
 
-struct AllStarsShowsListView: View {
+struct AddedToListShowsListView: View {
     
     @ObservedObject var showViewModel = ShowViewModel()
     @State var searchText = ""
@@ -76,7 +77,7 @@ struct AllStarsShowsListView: View {
         if let data = UserDefaults.standard.object(forKey: "showState") as? Data,
            let showStates = try? jsonDecoder.decode([ShowState].self, from: data) {
 //            print(showStates)
-            let listShows = showStates.filter{$0.isAddedToAllStars}
+            let listShows = showStates.filter{$0.isAddedToList}
             var filterIDs = [Int]()
             for show in listShows {
 //                print("\(show.id)")

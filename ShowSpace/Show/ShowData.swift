@@ -31,8 +31,6 @@ struct ShowState: Codable, Identifiable{
     var isAddedToAllStars: Bool
 }
 
-struct ShowStateRating: Codable{
-    var UserRating: String
+struct UserRating: Codable {
+    var rating: Double
 }
-
-

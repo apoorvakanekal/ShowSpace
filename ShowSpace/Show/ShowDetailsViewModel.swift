@@ -10,6 +10,12 @@ import SwiftUI
 
 class ShowDetailsViewModel: ObservableObject {
     
+    @Published var userRating: UserRating {
+            didSet {
+                saveRatingToDefaults()
+            }
+        }
+    
     enum ShowStateType {
         case allShows
         case allStars
@@ -20,6 +26,17 @@ class ShowDetailsViewModel: ObservableObject {
     
     init(show: Show) {
         self.show = show
+        
+        if let savedRatingData = UserDefaults.standard.data(forKey: "\(show.id)_userRating"),
+                   let savedRating = try? JSONDecoder().decode(UserRating.self, from: savedRatingData) {
+                    self.userRating = savedRating
+                } else {
+                    // If there's no saved data, create a new UserRating instance
+                    self.userRating = UserRating(rating: 0.0)
+                }
+
+//                self.viewModel = ShowDetailsViewModel(show: show)
+//                viewModel.loadFromDefaults()
     }
     
     var showState = ShowState(id: -1, isAddedToList: false, isAddedToAllStars: false)
@@ -27,7 +44,6 @@ class ShowDetailsViewModel: ObservableObject {
     @Published var allShowsImage = ""
     @Published var allStarsTitle = ""
     @Published var allStarsImage = ""
-    @Published var userRating = ""
 
    
     
@@ -36,10 +52,6 @@ class ShowDetailsViewModel: ObservableObject {
         allShowsImage = showState.isAddedToList  ? "checkmark" : "plus"
         allStarsTitle = showState.isAddedToAllStars ? "Added to All Stars" : "Add to All Stars?"
         allStarsImage = showState.isAddedToAllStars  ? "checkmark" : "plus"
-    }
-    
-    func userRatingHandling() {
-        print("hi")
     }
     
     
@@ -114,4 +126,14 @@ class ShowDetailsViewModel: ObservableObject {
         
         updateButtonInterface()
     }
+    
+    private func saveRatingToDefaults() {
+           if let encodedData = try? JSONEncoder().encode(userRating) {
+               UserDefaults.standard.set(encodedData, forKey: "\(show.id)_userRating")
+           }
+       }
+    
+    func updateRating(_ rating: Double) {
+            userRating.rating = rating
+        }
 }

@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import StarRateView
 
 struct ShowView: View {
     
-    @AppStorage ("rating") private var rating: String = ""
+//    @State var rating: String = ""
+    @State var rate: Double = 0.0
     @ObservedObject var viewModel: ShowDetailsViewModel
     var show: Show
     
@@ -85,9 +87,15 @@ struct ShowView: View {
                     }
                     .padding(EdgeInsets(top: 0, leading: 25, bottom: 0, trailing: 0))
                     VStack(alignment: .center){
-                        CustomTextField(placeHolder: "Your Rating / 10", imageName: "star", opacity: 1.0, value: $rating){
-                            viewModel.userRatingHandling()
-                        }
+//                        CustomTextField(placeHolder: "Your Rating / 10", imageName: "star", opacity: 1.0, value: $rating)
+                        Text(String(format: "Your Rating: %.1f", viewModel.userRating.rating))
+                        StarRateView(starCount: 10, rate: viewModel.userRating.rating)
+                                   .starSize(20)
+                                   .starPadding(4.0)
+                                   .forgroundStarColor(.yellow)
+                                   .backgroundStarColor(.gray)
+                        Slider(value: $viewModel.userRating.rating, in: 0...10, step: 0.1)
+                            .padding(.horizontal, 16)
                     }
                     .padding(EdgeInsets(top: 0, leading: 40, bottom: 0, trailing: 0))
                 }

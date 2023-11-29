@@ -14,15 +14,6 @@ struct CustomTextField: View {
     var imageName: String
     var opacity: Double
     @Binding var value: String
-    var onClick: (() -> Void)?
-    
-    init(placeHolder: String, imageName: String,  opacity: Double, value: Binding<String>, onClick: (() -> Void)? = nil) {
-        self.placeHolder = placeHolder
-        self.imageName = imageName
-        self.opacity = opacity
-        self.onClick = onClick
-        self._value = value
-    }
     
     var body: some View {
         HStack{
@@ -33,20 +24,20 @@ struct CustomTextField: View {
                 .padding(.leading, 20)
                 .foregroundColor(Color(DesignConstants.textColor.opacity(opacity)))
             
-//            if placeHolder == "Password" || placeHolder == "Confirm Password"{
-//                ZStack (alignment: .leading){
-//                    if value.isEmpty {
-//                        Text(placeHolder)
-//                            .foregroundColor(Color(DesignConstants.textColor.opacity(opacity)))
-//                            .padding(.leading, 12)
-//                            .font(.subheadline)
-//                    }
-//                    SecureField("", text: self.value)
-//                        .padding(.leading, 12)
-//                        .font(.caption)
-//                        .frame(height: 45)
-//                }
-//            }
+            if placeHolder == "Password" || placeHolder == "Confirm Password"{
+                ZStack (alignment: .leading){
+                    if value.isEmpty {
+                        Text(placeHolder)
+                            .foregroundColor(Color(DesignConstants.textColor.opacity(opacity)))
+                            .padding(.leading, 12)
+                            .font(.subheadline)
+                    }
+                    SecureField("", text: $value)
+                        .padding(.leading, 12)
+                        .font(.caption)
+                        .frame(height: 45)
+                }
+            }
     
                 ZStack (alignment: .leading){
                     if value.isEmpty {
@@ -61,9 +52,8 @@ struct CustomTextField: View {
                         .frame(height: 45)
                         .foregroundColor(Color(DesignConstants.textColor))
                         .onSubmit() {
-                            onClick?()
                             print("tapped")
-                            print(self.value)
+                            print(value)
                         }
                 }
         }
