@@ -20,13 +20,14 @@ struct ContentView: View {
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
+                .environment(\.colorScheme, .dark)
             SearchView()
                 .toolbarBackground(DesignConstants.bgColor, for: .tabBar)
                 .tabItem {
                     Label("Search", systemImage: "magnifyingglass")
                 }
                 .environment(\.colorScheme, .dark)
-            LogInView()
+            AccountView()
                 .toolbarBackground(DesignConstants.bgColor, for: .tabBar)
                 .tabItem {
                     Label("Account", systemImage: "person")

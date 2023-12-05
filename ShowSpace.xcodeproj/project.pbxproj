@@ -81,6 +81,7 @@
 		1771DDF92B05E17A007A704B /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		178A959F2B0EB92600578129 /* AllStarsShowsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStarsShowsListView.swift; sourceTree = "<group>"; };
 		17C6F87D2B1448D2004B623E /* AddedToListShowsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedToListShowsListView.swift; sourceTree = "<group>"; };
+		17CDA5B92B1DACED005CF242 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		17D6D6372AF043AE003D57A6 /* ShowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowView.swift; sourceTree = "<group>"; };
 		17D6D6392AF05821003D57A6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		17D6D63B2AF05850003D57A6 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -142,6 +143,7 @@
 		1724DA592AEA269E0027E472 /* ShowSpace */ = {
 			isa = PBXGroup;
 			children = (
+				17CDA5B92B1DACED005CF242 /* Info.plist */,
 				1771DE012B05E308007A704B /* User Profile */,
 				1771DE002B05E2EA007A704B /* Account */,
 				17D6D6412AF1D73E003D57A6 /* Components */,
@@ -572,6 +574,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShowSpace/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -610,6 +613,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShowSpace/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

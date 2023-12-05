@@ -25,7 +25,7 @@ struct Photo : Codable{
     var medium: String
 }
 
-struct ShowState: Codable, Identifiable{
+struct ShowState: Codable, Identifiable, Equatable{
     var id: Int
     var isAddedToList: Bool
     var isAddedToAllStars: Bool

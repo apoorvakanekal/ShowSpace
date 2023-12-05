@@ -18,7 +18,10 @@ struct AddedToListShowsListView: View {
     
     
     var body: some View {
-        
+        if addedToListResults.isEmpty{
+            Text("No Shows have been added to your list yet! Find shows you want to watch in the home tab!")
+                .padding(.vertical, DesignConstants.showPadding)
+        }
         NavigationView{
             List(addedToListResults) { show in
                 VStack(alignment: .leading) {

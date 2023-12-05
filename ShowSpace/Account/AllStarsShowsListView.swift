@@ -17,9 +17,12 @@ struct AllStarsShowsListView: View {
     
     
     var body: some View {
-        
+        if addedToAllStarsResults.isEmpty{
+            Text("No Shows have been added to All Stars yet! Find shows you love in the search tab!")
+                .padding(.vertical, DesignConstants.showPadding)
+        }
         NavigationView{
-            List(addedToListResults) { show in
+            List(addedToAllStarsResults) { show in
                 VStack(alignment: .leading) {
                     NavigationLink {
                         ShowView(show: show)
@@ -42,6 +45,7 @@ struct AllStarsShowsListView: View {
                             }
                             }
                             .frame(height: 80)
+                            .padding(.bottom, 15)
                             VStack{
                                 Text("\(show.name)")
                                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -49,8 +53,8 @@ struct AllStarsShowsListView: View {
                                     .font(.caption)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                     .foregroundColor(Color("cool purple"))
-                                
                             }
+                            .padding(.leading, 10)
                         }
                     }
                 }
@@ -59,7 +63,7 @@ struct AllStarsShowsListView: View {
                     Rectangle()
                         .fill(Color(DesignConstants.bgColor).opacity(1))
                          .cornerRadius(5)
-                         .padding(5)
+                         .padding(.bottom, 10)
                 )
             }
             .listStyle(PlainListStyle())
@@ -70,8 +74,8 @@ struct AllStarsShowsListView: View {
         }
     }
     
-    var addedToListResults: [Show] {
-//        print("entered search")
+    var addedToAllStarsResults: [Show] {
+        print("fetching list results")
         let jsonDecoder = JSONDecoder()
         if let data = UserDefaults.standard.object(forKey: "showState") as? Data,
            let showStates = try? jsonDecoder.decode([ShowState].self, from: data) {
@@ -82,14 +86,13 @@ struct AllStarsShowsListView: View {
 //                print("\(show.id)")
                 filterIDs.append(show.id)
             }
-            print(filterIDs)
+//            print(filterIDs)
             let filteredShows = showViewModel.shows.filter{filterIDs.contains($0.id)}
-            print(filteredShows)
+            print("filteredShows: \(filteredShows)" )
             return filteredShows
         }
         else{
-            let emptyList = [Show]()
-            return emptyList
+            return []
             }
         }
     }

@@ -28,7 +28,6 @@ struct AccountView: View {
                                 .frame(width: 90, height: 90)
                                 .clipShape(Circle())
                                 .padding(.bottom, DesignConstants.showPadding)
-                                .padding(.top, -100)
                         } else {
                             Image("defaultPerson")
                                 .resizable()
@@ -36,7 +35,6 @@ struct AccountView: View {
                                 .frame(width: 90, height: 90)
                                 .clipShape(Circle())
                                 .padding(.bottom, DesignConstants.showPadding)
-                                .padding(.top, -100)
                         }
                         Text("\(viewModel.userName)")
                             .font(.title3)
@@ -118,7 +116,7 @@ struct AccountView: View {
                             }
                         }
                     }
-                    .padding(30)
+                    .padding(DesignConstants.showPadding)
                 }
                 .toolbar{
                     Button{
