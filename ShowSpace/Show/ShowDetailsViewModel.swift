@@ -19,6 +19,7 @@ class ShowDetailsViewModel: ObservableObject {
     enum ShowStateType {
         case allShows
         case allStars
+        case currentlyWatching
     }
     
     let show: Show
@@ -39,19 +40,22 @@ class ShowDetailsViewModel: ObservableObject {
 //                viewModel.loadFromDefaults()
     }
     
-    var showState = ShowState(id: -1, isAddedToList: false, isAddedToAllStars: false)
+    var showState = ShowState(id: -1, isAddedToList: false, isAddedToAllStars: false, isCurrentlyWatching: false)
     @Published var allShowsTitle = ""
     @Published var allShowsImage = ""
     @Published var allStarsTitle = ""
     @Published var allStarsImage = ""
+    @Published var currentlyWatchingTitle = ""
+    @Published var currentlyWatchingImage = ""
 
-   
     
     func updateButtonInterface() {
-        allShowsTitle = showState.isAddedToList ? "Added to List" : "Add to List?"
+        allShowsTitle = showState.isAddedToList ? "Added to list" : "Add to list?"
         allShowsImage = showState.isAddedToList  ? "checkmark" : "plus"
-        allStarsTitle = showState.isAddedToAllStars ? "Added to All Stars" : "Add to All Stars?"
+        allStarsTitle = showState.isAddedToAllStars ? "Added to all stars" : "Add to all stars?"
         allStarsImage = showState.isAddedToAllStars  ? "checkmark" : "plus"
+        currentlyWatchingTitle = showState.isCurrentlyWatching ? "Watching show currently" : "Currently watching show?"
+        currentlyWatchingImage = showState.isCurrentlyWatching ? "checkmark" : "plus"
     }
     
     
@@ -75,6 +79,8 @@ class ShowDetailsViewModel: ObservableObject {
                     showToUpdate.isAddedToList = !showToUpdate.isAddedToList
                 case .allStars:
                     showToUpdate.isAddedToAllStars = !showToUpdate.isAddedToAllStars
+                case .currentlyWatching:
+                    showToUpdate.isCurrentlyWatching = !showToUpdate.isCurrentlyWatching
                 }
                 
                 showStates.remove(at: indexShow)
@@ -82,7 +88,7 @@ class ShowDetailsViewModel: ObservableObject {
             
             } else {
                 
-                let newShowState = ShowState(id: show.id, isAddedToList: showStateType == .allShows, isAddedToAllStars: showStateType == .allStars)
+                let newShowState = ShowState(id: show.id, isAddedToList: showStateType == .allShows, isAddedToAllStars: showStateType == .allStars, isCurrentlyWatching: showStateType == .currentlyWatching)
                 showStates.append(newShowState)
                 
             }
@@ -94,7 +100,7 @@ class ShowDetailsViewModel: ObservableObject {
             }
             
         } else {
-            let newShowState = ShowState(id: show.id, isAddedToList: showStateType == .allShows, isAddedToAllStars: showStateType == .allStars)
+            let newShowState = ShowState(id: show.id, isAddedToList: showStateType == .allShows, isAddedToAllStars: showStateType == .allStars, isCurrentlyWatching: showStateType == .currentlyWatching)
             
             if let encodedData =  try? jsonEncoder.encode([newShowState]) {
                 UserDefaults.standard.setValue(encodedData, forKey: "showState")
@@ -108,6 +114,8 @@ class ShowDetailsViewModel: ObservableObject {
             showState.isAddedToList = !showState.isAddedToList
         case .allStars:
             showState.isAddedToAllStars = !showState.isAddedToAllStars
+        case .currentlyWatching:
+            showState.isCurrentlyWatching = !showState.isCurrentlyWatching
         }
         updateButtonInterface()
     }
@@ -120,6 +128,7 @@ class ShowDetailsViewModel: ObservableObject {
             
             showState.isAddedToList = show.isAddedToList
             showState.isAddedToAllStars = show.isAddedToAllStars
+            showState.isCurrentlyWatching = show.isCurrentlyWatching
         } else {
             print("Fail to read data from defaults")
         }

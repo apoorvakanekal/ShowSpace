@@ -49,9 +49,11 @@ struct AccountView: View {
                                 .foregroundColor(DesignConstants.textColor)
                                 .font(.headline)
                                 .padding(.vertical, 10)
-                            RoundedRectangle(cornerRadius: 5.0)
-                                .frame(height: 100)
-                                .padding(.bottom, 10)
+                            CurrentlyWatchingListView()
+//                                .frame(maxWidth: .infinity)
+//                                .background(DesignConstants.bgColor)
+//                                .cornerRadius(3)
+//                                .environment(\.colorScheme, .dark)
                             Divider()
                                 .overlay(Color("cool purple"))
                             HStack{
@@ -61,17 +63,17 @@ struct AccountView: View {
                                 }) {
                                     if isShowingAllStarsShows{
                                         Text("All Stars")
-                                            .padding()
+                                            .padding(10)
                                             .background(Color("cool purple"))
                                             .foregroundColor(.white)
-                                            .cornerRadius(5)
+                                            .cornerRadius(3)
                                     }
                                     else{
                                         Text("All Stars")
-                                            .padding()
+                                            .padding(10)
                                             .background(Color("cool purple"))
                                             .foregroundColor(.white)
-                                            .cornerRadius(5)
+                                            .cornerRadius(3)
                                             .opacity(0.3)
                                     }
                                 }
@@ -83,17 +85,17 @@ struct AccountView: View {
                                 }) {
                                     if isShowingAddedToListShows{
                                         Text("My List")
-                                            .padding()
+                                            .padding(10)
                                             .background(Color("cool purple"))
                                             .foregroundColor(.white)
-                                            .cornerRadius(5)
+                                            .cornerRadius(3)
                                     }
                                     else{
                                         Text("My List")
-                                            .padding()
+                                            .padding(10)
                                             .background(Color("cool purple"))
                                             .foregroundColor(.white)
-                                            .cornerRadius(5)
+                                            .cornerRadius(3)
                                             .opacity(0.3)
                                     }
                                 }
@@ -104,14 +106,14 @@ struct AccountView: View {
                                 AllStarsShowsListView()
                                     .frame(maxWidth: .infinity)
                                     .background(DesignConstants.bgColor)
-                                    .cornerRadius(5)
+                                    .cornerRadius(3)
                                     .environment(\.colorScheme, .dark)
                             }
                             if isShowingAddedToListShows {
                                 AddedToListShowsListView()
                                     .frame(maxWidth: .infinity)
                                     .background(DesignConstants.bgColor)
-                                    .cornerRadius(5)
+                                    .cornerRadius(3)
                                     .environment(\.colorScheme, .dark)
                             }
                         }

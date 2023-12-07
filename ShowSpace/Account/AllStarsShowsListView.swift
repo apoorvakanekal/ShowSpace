@@ -19,7 +19,7 @@ struct AllStarsShowsListView: View {
     var body: some View {
         if addedToAllStarsResults.isEmpty{
             Text("No Shows have been added to All Stars yet! Find shows you love in the search tab!")
-                .padding(.vertical, DesignConstants.showPadding)
+                .padding(DesignConstants.showPadding)
         }
         NavigationView{
             List(addedToAllStarsResults) { show in

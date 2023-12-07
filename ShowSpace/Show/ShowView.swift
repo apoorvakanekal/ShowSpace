@@ -46,12 +46,17 @@ struct ShowView: View {
                             }
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        HStack{
-                            ShowsButton(buttonTitle: viewModel.allShowsTitle, imageName: viewModel.allShowsImage, background: Color("bright purple")) {
-                                viewModel.saveToDefaults(showStateType: .allShows)
+                        VStack{
+                            HStack{
+                                ShowsButton(buttonTitle: viewModel.allShowsTitle, imageName: viewModel.allShowsImage, background: Color("bright purple")) {
+                                    viewModel.saveToDefaults(showStateType: .allShows)
+                                }
+                                ShowsButton(buttonTitle: viewModel.allStarsTitle, imageName: viewModel.allStarsImage, background: Color("show-yellow")) {
+                                    viewModel.saveToDefaults(showStateType: .allStars)
+                                }
                             }
-                            ShowsButton(buttonTitle: viewModel.allStarsTitle, imageName: viewModel.allStarsImage, background: Color("show-yellow")) {
-                                viewModel.saveToDefaults(showStateType: .allStars)
+                            ShowsButton(buttonTitle: viewModel.currentlyWatchingTitle, imageName: viewModel.currentlyWatchingImage, background: Color("cool purple")) {
+                                viewModel.saveToDefaults(showStateType: .currentlyWatching)
                             }
                         }
                     }
