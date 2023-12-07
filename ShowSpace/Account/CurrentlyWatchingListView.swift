@@ -58,7 +58,6 @@ struct CurrentlyWatchingListView: View {
                         }
                     }
                 }
-                .padding(.vertical, 5)
                 .listRowBackground(
                     Rectangle()
                         .fill(Color(DesignConstants.bgColor).opacity(1))
