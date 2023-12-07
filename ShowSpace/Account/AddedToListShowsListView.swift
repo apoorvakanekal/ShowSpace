@@ -52,7 +52,7 @@ struct AddedToListShowsListView: View {
                                 Text("\(show.premiered.formatted(.dateTime.year()))")
                                     .font(.caption)
                                     .frame(maxWidth: .infinity, alignment: .leading)
-                                    .foregroundColor(Color("cool purple"))
+                                    .foregroundColor(Color("show-yellow"))
                                 
                             }
                         }

@@ -47,7 +47,7 @@ struct SearchView: View {
                                 Text("\(show.premiered.formatted(.dateTime.year()))")
                                     .font(.caption)
                                     .frame(maxWidth: .infinity, alignment: .leading)
-                                    .foregroundColor(Color("cool purple"))
+                                    .foregroundColor(Color("show-yellow"))
                                 
                             }
                         }
@@ -61,11 +61,10 @@ struct SearchView: View {
             .searchable(text:$searchText)
         }
     }
-    
     var searchResults: [Show] {
         print("entered search")
         if searchText.isEmpty {
-            return showViewModel.shows
+            return []
         }
         else{
             return showViewModel.shows.filter{
