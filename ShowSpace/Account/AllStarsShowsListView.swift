@@ -14,8 +14,6 @@ struct AllStarsShowsListView: View {
 
     let dateFormatter = DateFormatter()
     
-    
-    
     var body: some View {
         if addedToAllStarsResults.isEmpty{
             Text("No Shows have been added to All Stars yet! Find shows you love in the search tab!")
