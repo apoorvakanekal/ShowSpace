@@ -14,6 +14,7 @@ struct AccountView: View {
     @State private var isShowingAllStarsShows = true
     @State private var isShowingAddedToListShows = false
     @ObservedObject var viewModel = AccountViewModel()
+    @ObservedObject var sharedShowViewModel = ShowViewModel()
     
     
     var body: some View {
@@ -49,7 +50,7 @@ struct AccountView: View {
                                 .foregroundColor(DesignConstants.textColor)
                                 .font(.headline)
                                 .padding(.vertical, 10)
-                            CurrentlyWatchingListView()
+                            CurrentlyWatchingListView(showViewModel: sharedShowViewModel)
                                 .frame(maxWidth: .infinity)
                                 .background(DesignConstants.bgColor)
                                 .cornerRadius(3)
@@ -58,8 +59,8 @@ struct AccountView: View {
                                 .overlay(Color("cool purple"))
                             HStack{
                                 Button(action: {
-                                    isShowingAllStarsShows.toggle()
-                                    isShowingAddedToListShows.toggle()
+                                    isShowingAllStarsShows = true
+                                    isShowingAddedToListShows = false
                                 }) {
                                     if isShowingAllStarsShows{
                                         Text("All Stars")
@@ -80,8 +81,8 @@ struct AccountView: View {
                                 .padding(.vertical, 10)
                                 
                                 Button(action: {
-                                    isShowingAddedToListShows.toggle()
-                                    isShowingAllStarsShows.toggle()
+                                    isShowingAddedToListShows = true
+                                    isShowingAllStarsShows = false
                                 }) {
                                     if isShowingAddedToListShows{
                                         Text("My List")
@@ -103,14 +104,14 @@ struct AccountView: View {
                             }
                             
                             if isShowingAllStarsShows {
-                                AllStarsShowsListView()
+                                AllStarsShowsListView(showViewModel: sharedShowViewModel)
                                     .frame(maxWidth: .infinity)
                                     .background(DesignConstants.bgColor)
                                     .cornerRadius(3)
                                     .environment(\.colorScheme, .dark)
                             }
                             if isShowingAddedToListShows {
-                                AddedToListShowsListView()
+                                AddedToListShowsListView(showViewModel: sharedShowViewModel)
                                     .frame(maxWidth: .infinity)
                                     .background(DesignConstants.bgColor)
                                     .cornerRadius(3)

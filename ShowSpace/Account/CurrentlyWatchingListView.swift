@@ -10,7 +10,6 @@ import SwiftUI
 struct CurrentlyWatchingListView: View {
     
     @ObservedObject var showViewModel = ShowViewModel()
-    @State var searchText = ""
 
     let dateFormatter = DateFormatter()
     
