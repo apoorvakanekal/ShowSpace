@@ -59,6 +59,8 @@ struct SearchView: View {
 
             }
             .searchable(text:$searchText)
+            .navigationTitle("Looking for a show?")
+
         }
     }
     var searchResults: [Show] {
