@@ -60,9 +60,25 @@ struct SearchView: View {
             }
             .searchable(text:$searchText)
             .navigationTitle("Looking for a show?")
+            .overlay(
+                noResultsView()
+                    .opacity(searchResults.isEmpty ? 1 : 0)
+            )
 
         }
     }
+    
+    @ViewBuilder
+    private func noResultsView() -> some View {
+        if searchResults.isEmpty && !searchText.isEmpty {
+            Text("No results found.")
+                .foregroundColor(.secondary)
+                .padding(DesignConstants.showPadding)
+        } else {
+            EmptyView()
+        }
+    }
+    
     var searchResults: [Show] {
         print("entered search")
         if searchText.isEmpty {
