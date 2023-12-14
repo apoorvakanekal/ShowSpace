@@ -20,7 +20,7 @@ struct SearchView: View {
         NavigationView{
             List(searchResults) { show in
                 VStack(alignment: .leading) {
-                    NavigationLink {
+                    NavigationLink{
                         ShowView(show: show)
                     } label: {
                         HStack{

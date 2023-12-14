@@ -27,7 +27,7 @@ struct ShowView: View {
             DesignConstants.bgColor
                 .ignoresSafeArea()
             VStack{
-                HStack {
+                HStack{
                     VStack{
                         Text("\(show.name)")
                             .fontWeight(.semibold)

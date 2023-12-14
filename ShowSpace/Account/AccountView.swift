@@ -28,14 +28,14 @@ struct AccountView: View {
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 90, height: 90)
                                 .clipShape(Circle())
-                                .padding(.bottom, DesignConstants.showPadding)
+//                                .padding(.bottom, DesignConstants.showPadding)
                         } else {
                             Image("defaultPerson")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 90, height: 90)
                                 .clipShape(Circle())
-                                .padding(.bottom, DesignConstants.showPadding)
+//                                .padding(.bottom, DesignConstants.showPadding)
                         }
                         Text("\(viewModel.userName)")
                             .font(.title3)
