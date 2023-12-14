@@ -29,12 +29,12 @@ struct ShowsButton: View {
             ZStack{
                 RoundedRectangle(cornerRadius: 3.0)
                     .foregroundColor(backgroundColor)
-                    .frame(height: 45)
+                    .frame(height: 50)
                 HStack{
                     Text(buttonTitle)
                         .foregroundColor(.white)
                         .font(.caption2)
-                        .fixedSize(horizontal: false, vertical: true)
+                        .multilineTextAlignment(.leading)
                     Spacer()
                     Image(systemName: imageName)
                         .foregroundColor(.white)
