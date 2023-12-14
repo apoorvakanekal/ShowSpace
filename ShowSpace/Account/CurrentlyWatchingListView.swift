@@ -44,7 +44,6 @@ struct CurrentlyWatchingListView: View {
                             }
                             }
                             .frame(height: 80)
-                            .padding(.bottom, 15)
                             VStack{
                                 Text("\(show.name)")
                                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -57,11 +56,12 @@ struct CurrentlyWatchingListView: View {
                         }
                     }
                 }
+                .padding(.vertical, 5)
                 .listRowBackground(
                     Rectangle()
                         .fill(Color(DesignConstants.bgColor).opacity(1))
                          .cornerRadius(5)
-                         .padding(.bottom, 10)
+                         .padding(5)
                 )
             }
             .listStyle(PlainListStyle())

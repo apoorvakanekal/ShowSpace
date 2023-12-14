@@ -43,7 +43,6 @@ struct AllStarsShowsListView: View {
                             }
                             }
                             .frame(height: 80)
-                            .padding(.bottom, 15)
                             VStack{
                                 Text("\(show.name)")
                                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -61,7 +60,7 @@ struct AllStarsShowsListView: View {
                     Rectangle()
                         .fill(Color(DesignConstants.bgColor).opacity(1))
                          .cornerRadius(5)
-                         .padding(.bottom, 10)
+                         .padding(5)
                 )
             }
             .listStyle(PlainListStyle())

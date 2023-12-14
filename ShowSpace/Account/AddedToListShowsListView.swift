@@ -53,8 +53,8 @@ struct AddedToListShowsListView: View {
                                     .font(.caption)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                     .foregroundColor(Color("show-yellow"))
-                                
                             }
+                            .padding(.leading, 10)
                         }
                     }
                 }
